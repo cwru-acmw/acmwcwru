@@ -54,8 +54,8 @@ export default function NavBar(props) {
 
    return (
       <ThemeProvider theme={theme}>
-         <Box className="nav-bar" >
-            <AppBar position="static" color='primary' sx={{px: 3, py: 2}} component="nav">
+         <Box>
+            <AppBar position="static" color='primary' sx={{py: 2}} component="nav">
                <Toolbar className="nav-bar-bar" sx={{ justifyContent: "space-between"}}>
                   <Link to="/" style={linkStyle}>
                      <Typography  variant="h5" component="div" sx={{fontFamily: "Raleway", fontWeight: '900', color: "light", textDecoration: 'none', ml: '25px'}}>

@@ -22,7 +22,7 @@ export default function Footer() {
             <AppBar position="static" sx={{background: "#323E42", py: "1%"}}>
                <Toolbar sx={{justifyContent: 'space-between'}}>
                   <a href='/'>
-                     <img src={logo} style={{width: '12%'}} />
+                     <img src={logo} style={{width: '7em'}} />
                   </a>
                   <Stack direction="row" spacing={2}>
                      <IconButton href="https://instagram.com/cwru.acmw?igshid=MWI4MTIyMDE=" target='_blank' size="medium" sx={iconBtnStyle} >

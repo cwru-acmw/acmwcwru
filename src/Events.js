@@ -1,12 +1,16 @@
-import { Button, Container, Box, Typography, Paper, Card, CardMedia, CardContent, Divider, Grid, Item, Stack, CardHeader } from "@mui/material"; 
+import { Button, Container, Box, Typography, Paper, Card, CardMedia, CardContent, Divider, Grid, Tooltip, Stack, IconButton } from "@mui/material"; 
 import {ThemeProvider} from '@mui/material/styles'; 
 import theme from './styles/Styles.js'; 
 import HeaderBox from './styles/HeaderBox'; 
 
 import eventsPic from './pictures/events-header.jpg';
 import EventIcon from '@mui/icons-material/Event';
+import { ClassNames } from "@emotion/react";
 
 function Events() {
+   //change calendar link for each semester
+   const gcalLink = 'https://calendar.google.com/calendar/u/0?cid=Y185M2NlYjM1NWVjMGYzYTA3ZDUzZjNjMmI0ZDA5NGJjNjVjY2ZlM2QyN2I1NjM3YjI2ZTQ0ZGFiZDAxMjYxYjFhQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20';
+
    //add descriptions here - try to keep to 2 lines on the card or the spacing gets weird- still need to fix
    const gb = [
       {
@@ -108,36 +112,60 @@ function Events() {
       },
    }
 
+   const iconBtnStyle = {
+      backgroundColor: '#7954A1', 
+      borderRadius: '4px',
+      color: 'white',
+      '&:hover': {
+         backgroundColor: '#F2F2F2',
+         color: '#7954A1',
+         borderColor: '#7954A1'
+      },
+   }
+
    return (
       <ThemeProvider theme={theme}>
          <HeaderBox image={eventsPic} height='50' top='40' title='Events' subtitle='' />
          <Container>
             <Stack direction='row' justifyContent='space-between' alignItems='center'>
-               <Typography variant="h5" color="secondary" sx={{fontWeight: 900, py: '2%'}}>
+               <Typography variant="h5" color="secondary" sx={{fontWeight: 900, py: '25px'}}>
                   Spring 2023 Calendar
                </Typography>
                <Button 
+                  // size="small"
                   variant="outlined" 
                   startIcon={<EventIcon />} 
-                  href='https://calendar.google.com/calendar/u/0?cid=Y185M2NlYjM1NWVjMGYzYTA3ZDUzZjNjMmI0ZDA5NGJjNjVjY2ZlM2QyN2I1NjM3YjI2ZTQ0ZGFiZDAxMjYxYjFhQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20'
-                  sx={btnStyle}
+                  href={gcalLink}
+                  sx={{...btnStyle, display: { xs: "none", sm: "flex"}}}
                >
                   Add to Google Calendar
-                  </Button>
+               </Button>
+               <Tooltip title="Add to Google Calendar">
+                  <IconButton
+                     // color="primary"
+                     edge="end"
+                     variant="outlined"
+                     href={gcalLink}
+                     sx={{ mr: 0, display: { sm: "none" }, ...iconBtnStyle }}
+                  >
+                     <EventIcon />
+                  </IconButton>
+               </Tooltip>
+               
             </Stack>
 
-            <Grid container rowSpacing={3} sx={{mb: '3%'}}>
+            <Grid container rowSpacing={3} sx={{mb: '25px'}}>
                {gb.map((info) => (
-                  <Grid item sm={12} container>
-                     <Grid item sm={12}>
-                        <Typography variant='h6' sx={{fontWeight: 900, textAlign: 'left', px: '2%', py: '1.5%', backgroundColor: '#D9D9D9', width: 'auto'}}>
+                  <Grid item xs={12} container>
+                     <Grid item xs={12}>
+                        <Typography variant='h6' sx={{fontWeight: 900, textAlign: 'left', px: '2%', py: '2%', backgroundColor: '#D9D9D9', width: 'auto'}}>
                            {info.month}
                         </Typography>
                      </Grid>
-                     <Grid item sm={12} container sx={{border: '1px solid #D9D9D9',}} >
+                     <Grid item xs={12} container sx={{border: '1px solid #D9D9D9',}}  >
                         {info.events.map((evs) => (
-                           <Grid item xs={4} >
-                              <Card sx={{backgroundColor: '#F2F2F2', m: '3%'}}>
+                           <Grid item xs={12} sm={4} >
+                              <Card height="100%" sx={{backgroundColor: '#F2F2F2', m: '10px', display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}}>
                                  <CardContent>
                                     <Typography varaint='h6' sx={{fontWeight: 900, textAlign: 'left'}}>
                                        {evs.date}
@@ -160,10 +188,8 @@ function Events() {
                ))}
             </Grid>
 
-
          </Container>
          
-
       </ThemeProvider>
    );
 }

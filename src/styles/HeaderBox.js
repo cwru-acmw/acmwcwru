@@ -11,19 +11,13 @@ import theme from './Styles.js';
    props.subtitle --> only for homepage - can make like a boolean value to show this or not 
 */
 export default function HeaderBox(props) {
-   // function getTitle() {
-   //    return props.subtitle !== '' ? 
-   // }
 
    return (
       <ThemeProvider theme={theme}>
          <Container maxWidth="xl" sx={{background: 'black', width: '100%', mx: '0%'}}> 
             <Box className="header" sx={{position: 'relative', height: `${props.height}vh`, textAlign: 'center', backgroundImage: `url(${props.image})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
-               {/* <img src={props.image} style={{width: '100%', height: '100%', opacity: 0.55}} /> */}
-               {/* WHY DID I CHANGE THIS */}
                <div style={{position: 'absolute', width: '100%', backgroundColor: 'rgba(0,0,0,0.6)', height: '100%' }}>
                   <Typography className="page-title" variant="h2" color="white" sx={{fontSize: '4.0em', fontWeight: 900, px: '5%', py: '20vh'}}>
-                     {/* to see if it is title because i didn't know how to do the <br/> with passing in a string */}
                      {props.title}
                         
                   </Typography>
@@ -32,7 +26,6 @@ export default function HeaderBox(props) {
                         Case Western Reserve University
                      </Typography>
                   }
-                  
                </div>
             </Box>
             

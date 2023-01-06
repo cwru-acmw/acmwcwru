@@ -5,6 +5,7 @@ import theme from './styles/Styles.js';
 
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 import logo from './pictures/ACMW-CWRU-02.png';
 
@@ -30,6 +31,9 @@ export default function Footer() {
                      </IconButton>
                      <IconButton href="mailto: acmw@case.edu" size="medium" sx={iconBtnStyle} >
                         <MailOutlineIcon sx={{color: "#ffffff", }} />
+                     </IconButton>
+                     <IconButton href="https://www.linkedin.com/" target='_blank' size="medium" sx={iconBtnStyle} >
+                        <LinkedInIcon sx={{color: "#ffffff", }} />
                      </IconButton>
                   </Stack>
                </Toolbar>

@@ -35,28 +35,3 @@ export default function HeaderBox(props) {
       
    );
 }
-
-
-/*
-
-<Container maxWidth="xl" sx={{background: 'black', width: '100%', mx: '0%'}}> 
-         <Box className="header" sx={{position: 'relative', height: '80vh', textAlign: 'center'}} >
-            <img src={computer} style={{width: '100%', height: '100%', opacity: 0.55}} />
-            <div style={{position: 'absolute', top: '30%', width: '100%'}}>
-               <Typography className="page-title" variant="h2" color="white" sx={{fontSize: '4.0em', fontWeight: 900, fontFamily: 'Raleway', px: '5%'}}>
-                     Association of<br/>      
-                     Computing Machinery - Women
-               </Typography>
- 
-               <Typography variant='h4' color="white" sx={{fontFamily: 'Raleway', px: '5%', py: '20px'}}>
-                  Case Western Reserve University
-               </Typography>
-            </div>
-            
-         </Box>
-         
-       
-      </Container>
-
-*/
-

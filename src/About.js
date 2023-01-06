@@ -1,7 +1,9 @@
-import { Button, Container, AppBar, Box, Typography, Paper, Card, CardMedia, CardContent, Divider, Grid } from "@mui/material"; 
+import { Button, Container, AppBar, Box, Typography, Paper, Card, CardMedia, CardContent, Divider, Grid, CardActions, IconButton } from "@mui/material"; 
 import {ThemeProvider} from '@mui/material/styles'; 
 import theme from './styles/Styles.js'; 
 import HeaderBox from './styles/HeaderBox'; 
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
 
 // change the pictures imported - delete old pictures in picture folder when need to import new pics
 import aboutPic from './pictures/about-header.jpg';
@@ -10,33 +12,50 @@ import vpPic from './pictures/zoePic.JPG';
 import prPic from './pictures/aliPic.jpg'; 
 import outreachPic from './pictures/kennedyPic.jpeg';
 
-function About() {
+export default function About() {
    // change exec info here - import pics from pictures folder shown above 
    const execInfo = [
       {
          role: 'President', 
          name: 'Arohi Mehta', 
-         pic: presPic
+         pic: presPic, 
+         lIn: 'https://www.linkedin.com/in/arohi-mehta/', 
+         email: 'aum5@case.edu'
       }, 
       {
          role: 'Vice President', 
          name: 'Zoe Goldberg', 
-         pic: vpPic
+         pic: vpPic, 
+         lIn: 'https://www.linkedin.com/in/zmgoldberg/', 
+         email: 'zmg12@case.edu'
       },
       {
          role: 'Treasurer', 
          name: 'Mia Yang', 
-         pic: ''
+         pic: '', 
+         lIn: 'https://www.linkedin.com/in/miahyang/', 
+         email: 'mhy12@case.edu'
       },
       {
          role: 'PR Chair', 
          name: 'Ali Puccio', 
-         pic: prPic
+         pic: prPic, 
+         lIn: 'https://www.linkedin.com/in/alessandra-puccio/', 
+         email: 'agp63@case.edu'
       }, 
       {
          role: 'Outreach Chair', 
          name: 'Kennedy Jackson', 
-         pic: outreachPic
+         pic: outreachPic, 
+         lIn: 'https://www.linkedin.com/', 
+         email: 'knj25@case.edu'
+      }, 
+      {
+         role: 'Faculty Advisor', 
+         name: 'An Wang', 
+         pic: '', 
+         lIn: '', 
+         email: ''
       }
    ];
 
@@ -86,6 +105,14 @@ function About() {
                               {position.name}
                            </Typography>
                         </CardContent>
+                        <CardActions sx={{justifyContent:'end'}} disableSpacing>
+                           <IconButton href={position.lIn} target='_blank' size="medium"  >
+                              <LinkedInIcon />
+                           </IconButton>
+                           <IconButton href={`mailTo: ${position.email}`}  size="medium" >
+                              <EmailIcon />
+                           </IconButton>
+                        </CardActions>
                      </Card>
                   </Grid>
                ))}
@@ -97,5 +124,3 @@ function About() {
       
    );
 }
-
-export default About; 

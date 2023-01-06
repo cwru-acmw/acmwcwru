@@ -142,20 +142,12 @@ export default function NavBar(props) {
                >
                   <Box 
                      onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-                     {/* <Typography variant="h6" sx={{ my: 2 }}>
-                        ACM-W · CWRU
-                     </Typography>
-                     <Divider /> */}
                      <List>
                         <ListItem disablePadding sx={{align: 'center'}}>
                            {/* <Link to='/about' style={{...linkStyle}}> */}
                               <Button href='/about' sx={{...listBtnStyle, }} >
                                  About
                               </Button>
-                           {/* </Link> */}
-                           {/* <ListItemButton sx={{ textAlign: "center" }}>
-                              <ListItemText primary='About' />
-                           </ListItemButton> */}
                         </ListItem>
                         <ListItem disablePadding>
                            <Button href='/events' sx={{...listBtnStyle,}} >

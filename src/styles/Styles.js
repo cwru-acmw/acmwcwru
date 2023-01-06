@@ -4,7 +4,7 @@ import { style } from '@mui/system';
 const Colors = {
    primary: "#401E46", //darkest purple
    secondary: "#7954A1", //medium-dark purple
-   error: "#ff0000", 
+   // error: "#ff0000", 
    info: "#323E42", //charcoal
    success: "#CA7FF2", //medium-light
    light: "#ffffff", 
@@ -20,7 +20,13 @@ const theme = createTheme({
       },
       secondary: {
          main: Colors.secondary
-      }
+      }, 
+      info: {
+         main: Colors.info
+      }, 
+      success: {
+         main: Colors.success
+      }, 
    }, 
    breakpoints: {
       values: {

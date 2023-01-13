@@ -32,7 +32,7 @@ export default function Footer() {
                      <IconButton href="mailto: acmw@case.edu" size="medium" sx={iconBtnStyle} >
                         <MailOutlineIcon sx={{color: "#ffffff", }} />
                      </IconButton>
-                     <IconButton href="https://www.linkedin.com/" target='_blank' size="medium" sx={iconBtnStyle} >
+                     <IconButton href="https://www.linkedin.com/company/acmw-at-case-western-reserve-university" target='_blank' size="medium" sx={iconBtnStyle} >
                         <LinkedInIcon sx={{color: "#ffffff", }} />
                      </IconButton>
                   </Stack>

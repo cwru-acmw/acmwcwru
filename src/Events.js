@@ -4,11 +4,12 @@ import {ThemeProvider} from '@mui/material/styles';
 import theme from './styles/Styles.js'; 
 import HeaderBox from './styles/HeaderBox'; 
 
-import eventsPic from './pictures/events-header.jpg';
+import eventsPic from './pictures/newerevent.jpg';
 import EventIcon from '@mui/icons-material/Event';
 import firstGB from './pictures/First_GB.png';
 import { ClassNames } from "@emotion/react";
 import React from "react";
+import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 
 export default function Events() {
    const [open, setOpen] = useState(false); 
@@ -27,18 +28,21 @@ export default function Events() {
                date: '1/23/23', 
                title: 'General Body - Semester Overview', 
                description: 'Free Luna’s Bakery, overview of semester plan, sign-up for peer mentoring',
+               link: 'https://cglink.me/2cS/r1967698', 
                popUpPic: firstGB
             }, 
             {
                date: '1/27/23', 
                title: 'Guest Speaker', 
-               description: 'Steph Hippo, a software engineer at Google (and CWRU alumni) shares her experiences',
+               description: 'Steph Hippo, a software engineer at Google & CWRU alum shares her experience in the industry',
+               link: 'https://cglink.me/2cS/r1967806', 
                popUpPic: ''
             }, 
             {
                date: '1/30/23', 
-               title: 'Brownies & Board Games', 
-               description: 'Our first peer mentoring event- Come to eat free brownies and play games with your mentors!',
+               title: 'How To Land an Internship', 
+               description: 'Karo Zhu, Amazon SWE & CWRU alum shares their experiences on how to land your dream internship',
+               link: 'https://cglink.me/2cS/r1969116', 
                popUpPic: ''
             }
          ]
@@ -50,36 +54,36 @@ export default function Events() {
                date: '2/4/23', 
                title: 'LeetCode Workshop & Grace Hopper Info', 
                description: 'Come practice your LeetCode skills and learn about the Grace Hopper Conference.',
+               link: 'https://community.case.edu/ACMW/club_signup',
                popUpPic: ''
             }, 
             {
                date: '2/6/23', 
-               title: 'General Body + Git Workshop', 
-               description: 'Our second general body meeting; learn about Git repositories and commands.',
+               title: 'General Body- Guest Speaker', 
+               description: 'Jeni Panhorst, Vice President at Intel & CWRU alum, shares her experiences in the industry ',
+               link: 'https://community.case.edu/ACMW/club_signup',
                popUpPic: ''
             }, 
-            {
-               date: '2/9/23', 
-               title: 'How To Land an Internship', 
-               description: 'Karo Zhu, Amazon SWE & CWRU alum shares how to land your dream internship.',
-               popUpPic: ''
-            }, 
+  
             {
                date: '2/10/23', 
                title: 'Guest Speaker', 
-               description: 'Raquel Bujans, engineering manager at Compass, gives tech talk and career advice.',
+               description: 'Raquel Bujans, engineering manager at Compass, gives tech talk and career advice',
+               link: 'https://community.case.edu/ACMW/club_signup',
                popUpPic: ''
             },
             {
                date: '2/13/23', 
                title: 'Resume Review with Swagelok', 
-               description: 'Have your resume reviewed by Swagelok representatives.',
+               description: 'Have your resume reviewed by Swagelok representatives',
+               link: 'https://community.case.edu/ACMW/club_signup',
                popUpPic: ''
             },
             {
                date: '2/20/23', 
                title: 'General Body - Tacos and Trivia Night', 
-               description: 'Our third general body, and enjoy tacos and trivia with your peer mentors!',
+               description: 'Our first peer mentoring event; enjoy tacos and trivia with your peer mentors!',
+               link: 'https://community.case.edu/ACMW/club_signup',
                popUpPic: ''
             },  
             
@@ -91,13 +95,15 @@ export default function Events() {
             {
                date: '3/6/23', 
                title: 'General Body - Guest Speaker', 
-               description: 'Kshama Girish',
+               description: 'Kshama Girish, a Software Program Manager at Apple & CWRU alum, shares her career experiences',
+               link: 'https://community.case.edu/ACMW/club_signup',
                popUpPic: ''
             }, 
             {
                date: '3/20/23', 
-               title: 'General Body - Thinkbox Tour?', 
-               description: 'add description',
+               title: 'General Body - Brownies and Board Games', 
+               description: 'Come to eat free brownies and play games with your mentors!',
+               link: 'https://community.case.edu/ACMW/club_signup',
                popUpPic: ''
             }, 
          ]
@@ -108,21 +114,23 @@ export default function Events() {
             {
                date: '4/3/23', 
                title: 'General Body - Guest Speaker', 
-               description: 'Rupika Pendyala',
+               description: 'Rupika Pendyala, an Engineering Analyst at Goldman Sachs & CWRU alum, shares her experiences',
+               link: 'https://community.case.edu/ACMW/club_signup',
                popUpPic: ''
             }, 
             {
                date: '4/10/23', 
                title: 'General Body - Cookies & Course Planning', 
-               description: 'add description',
+               description: 'Last peer mentoring event of the year! Join us to chat about course planning and more with your mentors while decorating delicious cookies!',
+               link: 'https://community.case.edu/ACMW/club_signup',
                popUpPic: ''
             }, 
-            {
-               date: '4/10/23', 
-               title: 'Women in Tech Banquet?', 
-               description: 'add description',
-               popUpPic: ''
-            }, 
+            // {
+            //    date: '4/10/23', 
+            //    title: 'Women in Tech Banquet?', 
+            //    description: 'add description',
+            //    popUpPic: ''
+            // }, 
          ]
       },
    ];
@@ -147,6 +155,20 @@ export default function Events() {
          color: '#7954A1',
          borderColor: '#7954A1'
       },
+   }
+   const btnStyle2 = {
+      textTransform: 'unset !important', 
+      fontFamily: 'Raleway', 
+      fontWeight: 600,
+      fontSize: '14px', 
+      color: '#7954A1',
+      border: '1.5px solid #7954A1',
+      // backgroundColor: '#7954A1',
+      px: '25px',
+      '&:hover': {
+         backgroundColor: '#7954A1',
+         color: 'white'
+      }
    }
 
    return (
@@ -206,6 +228,13 @@ export default function Events() {
                                        <Typography variant='body2' sx={{pt: '3%'}}>
                                           {evs.description}
                                        </Typography>
+                                       <Box
+                                          display="flex"
+                                          justifyContent="flex-start"
+                                          alignItems="flex-start"
+                                          marginTop={1}
+                                          >
+                                          <Button endIcon={<PersonAddAlt1Icon />} href= {evs.link} target='_blank' sx={btnStyle2}>Register Here </Button></Box>
                                     </CardContent>
                                  {/* </CardActionArea> */}
                                  

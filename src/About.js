@@ -7,11 +7,13 @@ import EmailIcon from '@mui/icons-material/Email';
 
 // change the pictures imported - delete old pictures in picture folder when need to import new pics
 import aboutPic from './pictures/about-header.jpg';
-import presPic from './pictures/arohiPic.JPG';
+import presPic from './pictures/arohiPic.jpg';
 import vpPic from './pictures/zoePic.JPG';
 import prPic from './pictures/aliPic.jpg'; 
 import outreachPic from './pictures/kennedyPic.jpeg';
-
+import advisorPic from './pictures/newwang.jpg';
+import sponsorPic from './pictures/evrenFinal.jpeg';
+import treasurerPic from './pictures/miaPic.JPEG';
 export default function About() {
    // change exec info here - import pics from pictures folder shown above 
    const execInfo = [
@@ -32,7 +34,7 @@ export default function About() {
       {
          role: 'Treasurer', 
          name: 'Mia Yang', 
-         pic: '', 
+         pic: treasurerPic, 
          lIn: 'https://www.linkedin.com/in/miahyang/', 
          email: 'mhy12@case.edu'
       },
@@ -49,15 +51,23 @@ export default function About() {
          pic: outreachPic, 
          lIn: 'https://www.linkedin.com/', 
          email: 'knj25@case.edu'
-      }, 
+      }
+   ];
+
+   const facultyInfo = [
       {
          role: 'Faculty Advisor', 
          name: 'An Wang', 
-         pic: '', 
-         lIn: '', 
-         email: ''
+         pic: advisorPic,  
+         email: 'axw474@case.edu'
+      },
+      {
+         role: 'Faculty Sponsor', 
+         name: 'Evren Gurkan Cavusoglu', 
+         pic: sponsorPic,  
+         email: 'exg44@case.edu'
       }
-   ];
+   ]
 
    return (
       <ThemeProvider theme={theme}>
@@ -117,8 +127,36 @@ export default function About() {
                   </Grid>
                ))}
                
-            </Grid>
-            
+            </Grid>   
+         </Container>
+
+         <Container sx={{my: '20px', textAlign: 'center', alignItems: 'center'}}>
+            <Typography  Typography variant="h4" color="secondary" sx={{fontWeight: 900, pb: '20px'}} >
+                  Meet Our Faculty
+            </Typography>
+            <Grid container justifyContent='space-between' alignItems='center' columnSpacing={8} rowSpacing={4}>
+               {facultyInfo.map((position, index) => (
+                  <Grid item alignItems='center' xs={12} sm={6} key={index}>
+                     <Card sx={{ minWidth: 400 }}>
+                        <CardMedia component='img' image={position.pic} height='425' width='full' sx={{minWidth: 400}} />
+                        <CardContent>
+                           <Typography variant='h5'>
+                              {position.role}
+                           </Typography>
+                           <Typography variant='h6'>
+                              {position.name}
+                           </Typography>
+                        </CardContent>
+                        <CardActions sx={{justifyContent:'end'}} disableSpacing>
+                           <IconButton href={`mailTo: ${position.email}`}  size="medium" >
+                              <EmailIcon />
+                           </IconButton>
+                        </CardActions>
+                     </Card>
+                  </Grid>
+               ))}
+               
+            </Grid>   
          </Container>
       </ThemeProvider>
       

@@ -41,7 +41,7 @@ export default function Events() {
             {
                date: '1/30/23', 
                title: 'How To Land an Internship', 
-               description: 'Karo Zhu, Amazon SWE & CWRU alum shares their experiences on how to land your dream internship',
+               description: 'Karo Zhu, Amazon SWE & CWRU alum shares advice on how to land an internsip',
                link: 'https://cglink.me/2cS/r1969116', 
                popUpPic: ''
             }

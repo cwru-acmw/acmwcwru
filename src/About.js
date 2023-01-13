@@ -7,7 +7,7 @@ import EmailIcon from '@mui/icons-material/Email';
 
 // change the pictures imported - delete old pictures in picture folder when need to import new pics
 import aboutPic from './pictures/about-header.jpg';
-import presPic from './pictures/arohiPic.jpg';
+import presPic from './pictures/arohiPic.JPG';
 import vpPic from './pictures/zoePic.JPG';
 import prPic from './pictures/aliPic.jpg'; 
 import outreachPic from './pictures/kennedyPic.jpeg';

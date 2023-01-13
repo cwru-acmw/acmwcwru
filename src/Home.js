@@ -115,13 +115,13 @@ export default function Home() {
          
       </Container>
       <Divider variant="middle" />
-      <Container sx={{my: '25px', mx: '2%'}}>
+      <Container sx={{my: '25px', mx: '2%', justifyContent: 'center'}}>
          <Typography varaint='h3' sx={{fontSize:'24px', fontWeight: 900, color: '#7954A1', pb: '5px'}}>
             Latest in CWRU ACM-W
          </Typography>
 
-         {/* <div className='sk-instagram-feed' data-embed-id='108583' style={{left: '50%'}}></div> */}
          <iframe src='https://widgets.sociablekit.com/instagram-feed/iframe/108583' frameborder='0' width='100%' height='520px'></iframe>
+         
       </Container>
       
     </ThemeProvider>

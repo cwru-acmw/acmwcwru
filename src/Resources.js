@@ -27,6 +27,7 @@ function Resources() {
       pic: acmw, 
       url: 'https://women.acm.org/'
       }] 
+
    const infoCWRU = [
          {
          title: 'Women in Tech', 
@@ -82,103 +83,99 @@ function Resources() {
    return (
       <ThemeProvider theme={theme}>
          <HeaderBox image={resourcesPic} height='50' top='40' title='Resources' subtitle='' />  
-         <Container> 
-         <Box sx={{my:'25px'}}>
-         <Typography variant="h4" color="secondary" sx={{fontWeight: 900, pb: '1%'}}>
-                 Coding Resources 
-               </Typography>
-         </Box> 
-         </Container> 
-         
+
          <Container sx={{my: '20px', textAlign: 'center', alignItems: 'center'}}>
-         <Box sx={{my:'25px'}}>
-            <Grid container justifyContent='space-between' alignItems='center' columnSpacing={8} rowSpacing={4}>
-               {info.map((position, index) => (
-                  <Grid item alignItems='center' xs={12} sm={4} key={index}>
-                     <Card sx={{ minWidth: 380 }} >
-                     <CardActionArea href={position.url}>
-                        <CardMedia component='img' image={position.pic} height='275' width='full' sx={{minWidth: 400}} />
-                        <CardContent>
-                           <Typography variant='h7'>
-                              {position.title}
-                           </Typography>
-                           <Typography display="block" variant='caption'>
-                              {position.desc}
-                           </Typography>
-                        </CardContent>
-                        </CardActionArea> 
-                     </Card>
-                  </Grid>
-               ))}
-               
-            </Grid>
+         
+            <Typography variant="h4" color="secondary" sx={{fontWeight: 900, mt: '30px', mb: '25px', textAlign: 'left'}}>
+                  Coding Resources 
+            </Typography>
+            <Box>
+               <Grid container justifyContent='space-between' alignItems='center' columnSpacing={2} rowSpacing={2} >
+                  {info.map((position, index) => (
+                     <Grid item alignItems='center' xs={12} sm={4} key={index}>
+                        <Card>
+                           <CardActionArea href={position.url} target='_blank'>
+                              <CardMedia component='img' image={position.pic} height='250' width='full' sx={{minWidth: 400}} />
+                              <CardContent>
+                                 <Typography variant='h7'>
+                                    {position.title}
+                                 </Typography>
+                                 <Typography display="block" variant='caption'>
+                                    {position.desc}
+                                 </Typography>
+                              </CardContent>
+                           </CardActionArea> 
+                        </Card>
+                     </Grid>
+                  ))}
+                  
+               </Grid>
             </Box> 
          </Container>
 
-         <Container> 
-         <Box sx={{my:'25px'}}>
-         <Typography variant="h4" color="secondary" sx={{fontWeight: 900, pb: '1%'}}>
-                 CWRU Resources 
+         {/* <Divider variant="middle" sx={{my: '25px'}}/> */}
+
+         {/* <Divider textAlign='left' sx={{my: '25px'}}> 
+               <Typography variant="h4" color="secondary" sx={{fontWeight: 900}}>
+                  CWRU Resources 
                </Typography>
-         </Box> 
-         </Container> 
+         </Divider>  */}
          
          <Container sx={{my: '20px', textAlign: 'center', alignItems: 'center'}}>
-         <Box sx={{my:'25px'}}>
-            <Grid container justifyContent='space-between' alignItems='center' columnSpacing={8} rowSpacing={4}>
-               {infoCWRU.map((position, index) => (
-                  <Grid item alignItems='center' xs={12} sm={4} key={index}>
-                     <Card sx={{ minWidth: 380 }} >
-                     <CardActionArea href={position.url}>
-                        <CardMedia component='img' image={position.pic} height='275' width='full' sx={{minWidth: 400}} />
-                        <CardContent>
-                           <Typography variant='h7'>
-                              {position.title}
-                           </Typography>
-                           <Typography display="block" variant='caption'>
-                              {position.desc}
-                           </Typography>
-                        </CardContent>
-                        </CardActionArea> 
-                     </Card>
-                  </Grid>
-               ))}
-               
-            </Grid>
+            <Typography variant="h4" color="secondary" sx={{fontWeight: 900, mt: '30px', mb: '25px', textAlign: 'left'}}>
+                  CWRU Resources 
+            </Typography>
+            <Box>
+               <Grid container justifyContent='space-between' alignItems='center' columnSpacing={2} rowSpacing={2}>
+                  {infoCWRU.map((position, index) => (
+                     <Grid item alignItems='center' xs={12} sm={4} key={index}>
+                        <Card >
+                        <CardActionArea href={position.url} target='_blank'>
+                           <CardMedia component='img' image={position.pic} height='250' width='full' sx={{minWidth: 400}} />
+                           <CardContent>
+                              <Typography variant='h7'>
+                                 {position.title}
+                              </Typography>
+                              <Typography display="block" variant='caption'>
+                                 {position.desc}
+                              </Typography>
+                           </CardContent>
+                           </CardActionArea> 
+                        </Card>
+                     </Grid>
+                  ))}
+                  
+               </Grid>
             </Box> 
          </Container>
 
-
-         <Container> 
-         <Box sx={{my:'25px'}}>
-         <Typography variant="h4" color="secondary" sx={{fontWeight: 900, pb: '1%'}}>
-                           National ACMW Resources
-                        </Typography>
-         </Box> 
-         </Container> 
+         {/* <Divider variant="middle" sx={{my: '25px', borderBottomWidth: 10}}/> */}
          
-         <Container sx={{my: '20px', textAlign: 'center', alignItems: 'center'}}>
-         <Box sx={{my:'25px'}}>
-            <Grid container justifyContent='space-between' alignItems='center' columnSpacing={8} rowSpacing={4}>
-               {nationalOrg.map((position, index) => (
-                  <Grid item alignItems='center' xs={12} sm={4} key={index}>
-                     <Card sx={{ minWidth: 380 }} >
-                     <CardActionArea href={position.url}>
-                        <CardMedia component='img' image={position.pic} height='275' width='full' sx={{minWidth: 400}} />
-                        <CardContent>
-                           <Typography display = "block" variant='h7'>
-                              {position.title}
-                           </Typography>
-                           <Typography display="block" variant='caption'>
-                              {position.desc}
-                           </Typography>
-                        </CardContent>
-                        </CardActionArea>
-                     </Card>
-                  </Grid>
-               ))}
-               
-            </Grid>
+         <Container sx={{mt: '20px', textAlign: 'center', alignItems: 'center', mb: '35px'}}>
+            <Typography variant="h4" color="secondary" sx={{fontWeight: 900, mt: '30px', mb: '25px', textAlign: 'left'}}>
+                  National ACM-W Resources 
+            </Typography>
+            <Box >
+               <Grid container justifyContent='space-between' alignItems='center' columnSpacing={2} rowSpacing={2}>
+                  {nationalOrg.map((position, index) => (
+                     <Grid item alignItems='center' xs={12} sm={4} key={index}>
+                        <Card sx={{ minWidth: 380, }} >
+                        <CardActionArea href={position.url} target='_blank'>
+                           <CardMedia component='img' image={position.pic} height='250' width='full' sx={{minWidth: 400}} />
+                           <CardContent>
+                              <Typography display = "block" variant='h7'>
+                                 {position.title}
+                              </Typography>
+                              <Typography display="block" variant='caption'>
+                                 {position.desc}
+                              </Typography>
+                           </CardContent>
+                           </CardActionArea>
+                        </Card>
+                     </Grid>
+                  ))}
+                  
+               </Grid>
             </Box> 
          </Container>
 

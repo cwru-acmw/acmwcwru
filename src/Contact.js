@@ -8,6 +8,21 @@ import contactPic from './pictures/contact-header.jpg';
 import ListItem from '@mui/material/ListItem';
 
 function Contact() {
+   const btnStyle2 = {
+      textTransform: 'unset !important', 
+      fontFamily: 'Raleway', 
+      fontWeight: 600,
+      fontSize: '16px', 
+      color: '#7954A1',
+      border: '1.5px solid #7954A1',
+      // backgroundColor: '#7954A1',
+      px: '25px',
+      '&:hover': {
+         backgroundColor: '#7954A1',
+         color: 'white'
+      },
+   }
+
    return (
       <ThemeProvider theme={theme}>
          <HeaderBox image={contactPic} height='50' top='40' title='Contact Us' subtitle='' />
@@ -17,18 +32,14 @@ function Contact() {
                  Get in Touch 
                </Typography>
                <Box sx={{my:'1%'}}>
-               <Typography variant="body1">
-                  Interested in joining ACM-W? Join our club on our <Link href="https://community.case.edu/ACMW/club_signup">CampusGroups</Link>  page to join the emailing list.
-               </Typography>
+                  <Typography variant="h6">
+                     Interested in joining ACM-W? Join our club on our <Link href="https://community.case.edu/ACMW/club_signup">CampusGroups</Link>  page to join the emailing list.
+                  </Typography>
+                  <Typography variant="h6" sx={{mt: '1%'}}>
+                     If you are interested in scheduling an event with us or have any questions, please email us at <Link href="mailto: acmw@case.edu">acmw@case.edu</Link>
+                  </Typography>
                </Box>
-               <Box sx={{my:'1%'}}>
-               <Typography variant="body1">
-                  If you are interested in scheduling an event with us or have any questions, please email us at <Link href="mailto: acmw@case.edu">acmw@case.edu</Link>
-               </Typography>
-               </Box>
-               <Box sx={{my:'1%'}}>
-               <Button variant="contained" href = "/about">Contact our Exec Board</Button>
-               </Box>
+               <Button href = "/about" sx={{...btnStyle2, my: '15px'}}>Contact our Exec Board</Button>
             </Box>
          </Container>
       </ThemeProvider>

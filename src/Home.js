@@ -118,9 +118,14 @@ export default function Home() {
                <Typography varaint='body1' sx={{px: '20px', pb: '35px', fontSize: '18px', }} >
                   Check out the exciting events we have planned for this semester:
                </Typography>
-               <Button endIcon={<CalendarMonthIcon />} href='/events' sx={btnStyle2}>
+               {/* <Button endIcon={<CalendarMonthIcon />} href='/events' sx={btnStyle2}>
                   View Schedule
-               </Button>
+               </Button> */}
+               <Link to='/events' style={linkStyle}>
+                  <Button endIcon={<CalendarMonthIcon />} sx={btnStyle2} >
+                     View Schedule
+                  </Button>
+               </Link>
             </Box>
          </Stack>
          

@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'; 
 import {ThemeProvider} from '@mui/material/styles'; 
 import theme from './styles/Styles.js'; 
-
+import { Link } from "react-router-dom";
 import computer from './pictures/main_computer.jpg';
 import './App.css';
 import { Button, Container, AppBar, Box, Toolbar, Typography, Paper, Grid, Card, Divider, Stack, CardContent } from "@mui/material"; 
@@ -18,6 +18,11 @@ const TitleTyp = styled(Typography)(({theme}) => ({
 }));
 
 export default function Home() {
+   const linkStyle = {
+      textDecoration: "none",
+      color: "#ffffff", 
+    };
+    
    const btnStyle = {
       textTransform: 'unset !important', 
       fontFamily: 'Raleway', 
@@ -80,9 +85,15 @@ export default function Home() {
             <Typography variant='h6' sx={{fontFamily: 'Raleway', pb: '10px', px: '2%'}}>
                ACM-W aims to promote gender equity in technical fields and develop an inclusive community. We hope to promote the success of women in this field and provide opportunities for professional development and collaboration. 
             </Typography>
-            <Button href='/about' endIcon={<ArrowForwardIosIcon />} sx={btnStyle}>
+            {/* <Button href='/about' endIcon={<ArrowForwardIosIcon />} sx={btnStyle}>
                Learn More
-            </Button>
+            </Button> */}
+            
+            <Link to='/about' style={linkStyle}>
+               <Button endIcon={<ArrowForwardIosIcon />} sx={btnStyle} >
+                  Learn More
+               </Button>
+            </Link>
          </Paper>
          
       </Container>

@@ -131,7 +131,7 @@ export default function Home() {
             Latest in CWRU ACM-W
          </Typography>
 
-         <iframe src='https://widgets.sociablekit.com/instagram-feed/iframe/108583' frameborder='0' width='100%' height='520px'></iframe>
+         <iframe src='https://widgets.sociablekit.com/instagram-feed/iframe/108583' frameBorder='0' width='100%' height='520px'></iframe>
          
       </Container>
       

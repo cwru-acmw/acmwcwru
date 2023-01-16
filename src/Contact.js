@@ -1,6 +1,6 @@
 import { Button, Container, AppBar, Box, Typography, Paper, Card, CardMedia, CardContent, Divider, Grid } from "@mui/material"; 
-import Link from '@mui/material/Link';
-
+// import Link from '@mui/material/Link';
+import { Link } from "react-router-dom";
 import {ThemeProvider} from '@mui/material/styles'; 
 import theme from './styles/Styles.js'; 
 import HeaderBox from './styles/HeaderBox'; 
@@ -23,6 +23,11 @@ function Contact() {
       },
    }
 
+   const linkStyle = {
+      textDecoration: "none",
+      color: "#ffffff", 
+    };
+
    return (
       <ThemeProvider theme={theme}>
          <HeaderBox image={contactPic} height='50' top='40' title='Contact Us' subtitle='' />
@@ -39,7 +44,12 @@ function Contact() {
                      If you are interested in scheduling an event with us or have any questions, please email us at <Link href="mailto: acmw@case.edu">acmw@case.edu</Link>
                   </Typography>
                </Box>
-               <Button href = "/about" sx={{...btnStyle2, my: '15px'}}>Contact our Exec Board</Button>
+               {/* <Button href = "/about" sx={{...btnStyle2, my: '15px'}}>Contact our Exec Board</Button> */}
+               <Link to='/about' style={linkStyle}>
+                  <Button sx={{...btnStyle2, my: '15px'}} >
+                     Contact our Exec Board
+                  </Button>
+               </Link>
             </Box>
          </Container>
       </ThemeProvider>

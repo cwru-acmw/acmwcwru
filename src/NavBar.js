@@ -16,7 +16,6 @@ export default function NavBar(props) {
       setMobileOpen((prevState) => !prevState);
     }; 
 
-
    const linkStyle = {
       textDecoration: "none",
       color: "#ffffff", 

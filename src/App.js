@@ -18,12 +18,12 @@ function App() {
       <ThemeProvider theme={theme}>
         <NavBar />
         <div className="pages">
-          <Routes>
+          <Routes >
             <Route path="/" element={<Home />}/>
-            <Route path="/about" element={<About />} />
-            <Route path="/events" element={<Events />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="about" element={<About />} />
+            <Route path="events" element={<Events />} />
+            <Route path="resources" element={<Resources />} />
+            <Route path="contact" element={<Contact />} />
           </Routes>
         </div>
         <Footer />

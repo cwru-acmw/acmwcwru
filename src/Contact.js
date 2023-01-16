@@ -27,6 +27,9 @@ function Contact() {
       textDecoration: "none",
       color: "#ffffff", 
     };
+    const linkStyle2 = {
+      color: "#7954A1", 
+    };
 
    return (
       <ThemeProvider theme={theme}>
@@ -38,10 +41,10 @@ function Contact() {
                </Typography>
                <Box sx={{my:'1%'}}>
                   <Typography variant="h6">
-                     Interested in joining ACM-W? Join our club on our <Link href="https://community.case.edu/ACMW/club_signup">CampusGroups</Link>  page to join the emailing list.
+                     Interested in joining ACM-W? Join our club on our <a href="https://community.case.edu/ACMW/club_signup" target='_blank' style={linkStyle2}>CampusGroups</a>  page to join the emailing list.
                   </Typography>
                   <Typography variant="h6" sx={{mt: '1%'}}>
-                     If you are interested in scheduling an event with us or have any questions, please email us at <Link href="mailto: acmw@case.edu">acmw@case.edu</Link>
+                     If you are interested in scheduling an event with us or have any questions, please email us at <a style={linkStyle2} href="mailto: acmw@case.edu">acmw@case.edu</a>
                   </Typography>
                </Box>
                {/* <Button href = "/about" sx={{...btnStyle2, my: '15px'}}>Contact our Exec Board</Button> */}

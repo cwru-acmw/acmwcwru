@@ -141,27 +141,45 @@ export default function NavBar(props) {
                >
                   <Box 
                      onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-                     <List>
-                        <ListItem disablePadding sx={{align: 'center'}}>
+                     <List sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
+                        <ListItem disablePadding sx={{px: '85px'}}>
                            {/* <Link to='/about' style={{...linkStyle}}> */}
-                              <Button href='/about' sx={{...listBtnStyle, }} >
+                           <Link to='/about' style={{...linkStyle}}>
+                              <Button sx={{...listBtnStyle, }} >
                                  About
                               </Button>
+                           </Link>
+                              
                         </ListItem>
-                        <ListItem disablePadding>
-                           <Button href='/events' sx={{...listBtnStyle,}} >
+                        <ListItem disablePadding sx={{px: '82px'}}>
+                           {/* <Button href='/events' sx={{...listBtnStyle,}} >
                               Events
-                           </Button>
+                           </Button> */}
+                           <Link to='/events' style={{...linkStyle}}>
+                              <Button sx={{...listBtnStyle, }} >
+                                 Events
+                              </Button>
+                           </Link>
                         </ListItem>
-                        <ListItem disablePadding>
-                              <Button href='/resources' sx={{...listBtnStyle,}} >
+                        <ListItem disablePadding sx={{px: '65px'}}>
+                              {/* <Button href='/resources' sx={{...listBtnStyle,}} >
+                                 Resources
+                              </Button> */}
+                           <Link to='/resources' style={{...linkStyle}}>
+                              <Button sx={{...listBtnStyle, }} >
                                  Resources
                               </Button>
+                           </Link>
                         </ListItem>
-                        <ListItem disablePadding>
-                           <Button href='/contact' sx={{...listBtnStyle,}} >
+                        <ListItem disablePadding sx={{px: '77px'}}>
+                           {/* <Button href='/contact' sx={{...listBtnStyle,}} >
+                                 Contact
+                              </Button> */}
+                           <Link to='/contact' style={{...linkStyle}}>
+                              <Button sx={{...listBtnStyle, }} >
                                  Contact
                               </Button>
+                           </Link>
                         </ListItem>
                      </List>
                   </Box>

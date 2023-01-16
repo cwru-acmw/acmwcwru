@@ -22,7 +22,7 @@ export default function Home() {
       textDecoration: "none",
       color: "#ffffff", 
     };
-    
+
    const btnStyle = {
       textTransform: 'unset !important', 
       fontFamily: 'Raleway', 
@@ -85,7 +85,7 @@ export default function Home() {
             <Typography variant='h6' sx={{fontFamily: 'Raleway', pb: '10px', px: '2%'}}>
                ACM-W aims to promote gender equity in technical fields and develop an inclusive community. We hope to promote the success of women in this field and provide opportunities for professional development and collaboration. 
             </Typography>
-            {/* <Button href='/about' endIcon={<ArrowForwardIosIcon />} sx={btnStyle}>
+            {/* <Button href='/about' endIcon={<ArrowForwardIosIcon />} sx={{...btnStyle}}>
                Learn More
             </Button> */}
             

@@ -12,7 +12,7 @@ import vpPic from './pictures/zoePic.JPG';
 import prPic from './pictures/aliPic.jpg'; 
 import outreachPic from './pictures/kennedyPic.jpeg';
 import advisorPic from './pictures/newwang.jpg';
-import sponsorPic from './pictures/evrenFinal.jpeg';
+import sponsorPic from './pictures/evrenFinal.jpg';
 import treasurerPic from './pictures/miaPic.JPEG';
 export default function About() {
    // change exec info here - import pics from pictures folder shown above 

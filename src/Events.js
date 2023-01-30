@@ -54,31 +54,30 @@ export default function Events() {
                date: '2/4/23', 
                title: 'LeetCode Workshop & Grace Hopper Info', 
                description: 'Come practice your LeetCode skills and learn about the Grace Hopper Conference.',
-               link: 'https://community.case.edu/ACMW/club_signup',
+               link: 'https://cglink.me/2cS/r1994685',
                popUpPic: ''
             }, 
-            {
-               date: '2/6/23', 
-               title: 'General Body- Guest Speaker', 
-               description: 'Jeni Panhorst, Vice President at Intel & CWRU alum, shares her experiences in the industry ',
-               link: 'https://community.case.edu/ACMW/club_signup',
-               popUpPic: ''
-            }, 
-  
             {
                date: '2/10/23', 
                title: 'Guest Speaker', 
                description: 'Raquel Bujans, engineering manager at Compass, gives tech talk and career advice',
-               link: 'https://community.case.edu/ACMW/club_signup',
+               link: 'https://cglink.me/2cS/r2016403',
                popUpPic: ''
             },
             {
                date: '2/13/23', 
                title: 'Resume Review with Swagelok', 
                description: 'Have your resume reviewed by Swagelok representatives',
-               link: 'https://community.case.edu/ACMW/club_signup',
+               link: 'https://cglink.me/2cS/r2016853',
                popUpPic: ''
             },
+            {
+               date: '2/17/23', 
+               title: 'General Body- Guest Speaker', 
+               description: 'Jeni Panhorst, Vice President at Intel & CWRU alum, shares her experiences in the industry ',
+               link: '',
+               popUpPic: 'https://community.case.edu/ACMW/club_signup'
+            }, 
             {
                date: '2/20/23', 
                title: 'General Body - Tacos and Trivia Night', 
@@ -103,6 +102,13 @@ export default function Events() {
                date: '3/20/23', 
                title: 'General Body - Brownies and Board Games', 
                description: 'Come to eat free brownies and play games with your mentors!',
+               link: 'https://community.case.edu/ACMW/club_signup',
+               popUpPic: ''
+            }, 
+            {
+               date: '3/27/23', 
+               title: 'Git Workshop', 
+               description: 'Come to learn and sharpen your Git skills taught by your peers!',
                link: 'https://community.case.edu/ACMW/club_signup',
                popUpPic: ''
             }, 

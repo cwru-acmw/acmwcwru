@@ -125,6 +125,13 @@ export default function Events() {
                popUpPic: ''
             }, 
             {
+               date: '4/6/23', 
+               title: 'Women in Tech Banquet', 
+               description: 'A large gathering of CWRU alumni, professors, and students to share their experiences within CWRU and in industry.',
+               link: '',
+               popUpPic: ''
+            },
+            {
                date: '4/10/23', 
                title: 'General Body - Cookies & Course Planning', 
                description: 'Last peer mentoring event of the year! Join us to chat about course planning and more with your mentors while decorating delicious cookies!',

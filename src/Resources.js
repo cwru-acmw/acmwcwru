@@ -17,6 +17,7 @@ import alumniassociation from './pictures/alumniassociation.jpg';
 import mathercenter from './pictures/mathercenter.jpg';
 import pdsp from './pictures/pdsp.jpg';
 import acmw from './pictures/nationalacmw.jpg';
+import runestone from './pictures/runestone_academy.jpeg';
 function Resources() {
    // possibly make an array of objects that has all the resource titles, descriptions and urls and then use .map() so easier to change later?
    //could also do one array for each section - like cwru resources array and then one for technical?
@@ -76,7 +77,12 @@ function Resources() {
          title: 'FreeCodeCamp', 
          desc: 'Learn new programming languages with free tutorials and modules.', 
          pic: freecodecamp, 
-         url: 'https://www.freecodecamp.org/'}
+         url: 'https://www.freecodecamp.org/'}, 
+         {
+            title: 'Runestone Academy', 
+            desc: 'A great resource with an in depth tutorial to learn Python and much more!', 
+            pic: runestone, 
+            url: 'https://runestone.academy/ns/books/published/fopp/index.html'}, 
    ]
 
     
@@ -90,7 +96,7 @@ function Resources() {
                   Coding Resources 
             </Typography>
             <Box>
-               <Grid container justifyContent='space-between' alignItems='center' columnSpacing={2} rowSpacing={2} >
+               <Grid container  alignItems='center' columnSpacing={2} rowSpacing={2} >
                   {info.map((position, index) => (
                      <Grid item alignItems='center' xs={12} sm={4} key={index}>
                         <Card>

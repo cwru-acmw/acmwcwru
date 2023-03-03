@@ -92,16 +92,30 @@ export default function Events() {
          month: "March", 
          events: [
             {
+               date: '3/2/23', 
+               title: 'LinkedIn Workshop', 
+               description: 'Create and update your LinkedIn profile with tips from a career coach. Also, come to take a free headshot for your profile!',
+               link: 'https://cglink.me/2cS/r2054898',
+               popUpPic: ''
+            },
+            {
                date: '3/6/23', 
                title: 'General Body - Guest Speaker', 
                description: 'Kshama Girish, a Software Program Manager at Apple & CWRU alum, shares her career experiences',
-               link: 'https://community.case.edu/ACMW/club_signup',
+               link: 'https://cglink.me/2cS/r2058401',
                popUpPic: ''
             }, 
             {
                date: '3/20/23', 
-               title: 'General Body - Brownies and Board Games', 
-               description: 'Come to eat free brownies and play games with your mentors!',
+               title: 'ACM-W Women\'s Week Event', 
+               description: 'Our guest speaker, adjunct professor and career coach Pooja Khatija, will talk about being a women in industry and negotiation tips.',
+               link: 'https://cglink.me/2cS/r2063951',
+               popUpPic: ''
+            }, 
+            {
+               date: '3/24/23', 
+               title: 'Carnegie Mellon Quantitative Finance Masters Info Session', 
+               description: 'Come to learn more about Carnegie Mellon\'s masters program in quantitative finance!',
                link: 'https://community.case.edu/ACMW/club_signup',
                popUpPic: ''
             }, 
@@ -109,6 +123,13 @@ export default function Events() {
                date: '3/27/23', 
                title: 'Git Workshop', 
                description: 'Come to learn and sharpen your Git skills taught by your peers!',
+               link: 'https://community.case.edu/ACMW/club_signup',
+               popUpPic: ''
+            }, 
+            {
+               date: '3/31/23', 
+               title: 'ACM-W x SWE - Thinkbox', 
+               description: 'With the Society of Women Engineers, come to learn more about the Thinkbox and to 3D print, laser cut, embroider and more!',
                link: 'https://community.case.edu/ACMW/club_signup',
                popUpPic: ''
             }, 
@@ -133,11 +154,19 @@ export default function Events() {
             },
             {
                date: '4/10/23', 
-               title: 'General Body - Cookies & Course Planning', 
-               description: 'Last peer mentoring event of the year! Join us to chat about course planning and more with your mentors while decorating delicious cookies!',
+               title: 'ACM-W x UMWS - Cookies & Course Planning', 
+               description: 'Peer mentoring event with UMWS: join us to chat about course planning and more!',
                link: 'https://community.case.edu/ACMW/club_signup',
                popUpPic: ''
             }, 
+            {
+               date: '4/21/23', 
+               title: 'Machine Learning Workshop', 
+               description: 'A workshop to learn the basics about machine learning led by a 3rd year at CWRU.',
+               link: 'https://community.case.edu/ACMW/club_signup',
+               popUpPic: ''
+            }, 
+            
             // {
             //    date: '4/10/23', 
             //    title: 'Women in Tech Banquet?', 

@@ -7,13 +7,16 @@ import EmailIcon from '@mui/icons-material/Email';
 
 // change the pictures imported - delete old pictures in picture folder when need to import new pics
 import aboutPic from './pictures/about-header.jpg';
-import presPic from './pictures/arohiPic.JPG';
-import vpPic from './pictures/zoePic.JPG';
-import prPic from './pictures/aliPic.jpg'; 
-import outreachPic from './pictures/kennedyPic.jpeg';
-import advisorPic from './pictures/newwang.jpg';
-import sponsorPic from './pictures/evrenFinal.jpg';
-import treasurerPic from './pictures/miaPic.JPEG';
+
+import presPic from './exec-pictures/presidentPic.jpg';
+import vpPic from './exec-pictures/vpPic.jpg';
+import prPic from './exec-pictures/prPic.jpg';
+import outreachPic from './exec-pictures/outreachPic.jpg';
+import advisorPic from './exec-pictures/advisorPic.jpg';
+import sponsorPic from './exec-pictures/sponsorPic.jpg';
+import treasurerPic from './exec-pictures/treasurerPic.jpg';
+import secretaryPic from './exec-pictures/secretaryPic.jpg';
+
 export default function About() {
    // change exec info here - import pics from pictures folder shown above 
    const execInfo = [
@@ -33,10 +36,10 @@ export default function About() {
       },
       {
          role: 'Treasurer', 
-         name: 'Mia Yang', 
+         name: 'Isabella Craun', 
          pic: treasurerPic, 
-         lIn: 'https://www.linkedin.com/in/miahyang/', 
-         email: 'mhy12@case.edu'
+         lIn: 'https://www.linkedin.com/in/bellacraun/', 
+         email: 'imc33@case.edu'
       },
       {
          role: 'PR Chair', 
@@ -51,6 +54,13 @@ export default function About() {
          pic: outreachPic, 
          lIn: 'https://www.linkedin.com/', 
          email: 'knj25@case.edu'
+      }, 
+      {
+         role: 'Secretary', 
+         name: 'Crystal Zhu', 
+         pic: secretaryPic, 
+         lIn: 'https://www.linkedin.com/in/crystalzhu-/', 
+         email: 'cxz630@case.edu'
       }
    ];
 

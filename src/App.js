@@ -8,7 +8,7 @@ import Resources from './Resources';
 import Contact from './Contact'; 
 import NavBar from './NavBar'; 
 import Footer from './Footer'; 
-import { Routes, Route } from 'react-router-dom'; 
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'; 
 
 import {ThemeProvider} from '@mui/material/styles'; 
 import theme from './styles/Styles.js'; 
@@ -17,6 +17,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
           <NavBar />
+
           <div className="pages">
             <Routes >
               <Route path="/" element={<Home />}/>
@@ -24,6 +25,7 @@ function App() {
               <Route path="/events" element={<Events />} />
               <Route path="/resources" element={<Resources />} />
               <Route path="/contact" element={<Contact />} />
+              {/* <Route path="*" component={NotFound}/> */}
             </Routes>
           </div>
           <Footer />
@@ -33,5 +35,16 @@ function App() {
     
   );
 }
+
+// function NotFound() {
+//   app.get("/*", function (req, res) {
+//     res.sendFile(path.join(__dirname, "dist/index.html"), function (err) {
+//       if (err) {
+//         res.status(500).send(err);
+//       }
+//     });
+//   });
+  
+// }
 
 export default App;

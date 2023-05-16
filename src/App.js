@@ -20,11 +20,11 @@ function App() {
 
           <div className="pages">
             <Routes >
-              <Route path="/" element={<Home />}/>
-              <Route path="/about" element={<About />} />
-              <Route path="/events" element={<Events />} />
-              <Route path="/resources" element={<Resources />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route exact path="/" element={<Home />}/>
+              <Route exact path="/about" element={<About />} />
+              <Route exact path="/events" element={<Events />} />
+              <Route exact path="/resources" element={<Resources />} />
+              <Route exact path="/contact" element={<Contact />} />
               {/* <Route path="*" component={NotFound}/> */}
             </Routes>
           </div>

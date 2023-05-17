@@ -1,12 +1,12 @@
-RewriteEngine On
-# RewriteBase /
+# RewriteEngine On
+# # RewriteBase /
 
-RewriteRule ^about$ /about [L]
-RewriteRule ^events$ /events [L]
-RewriteRule ^resources$ /resources [L]
-RewriteRule ^contact$ /contact [L]
+# RewriteRule ^about$ /about [L]
+# RewriteRule ^events$ /events [L]
+# RewriteRule ^resources$ /resources [L]
+# RewriteRule ^contact$ /contact [L]
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME} !-f
 
-RewriteRule . /index.html [L]
+# RewriteRule . /index.html [L]

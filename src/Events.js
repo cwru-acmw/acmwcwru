@@ -26,7 +26,7 @@ export default function Events() {
    //fetches the data once the "events" page is first rendered (updates on refresh of page)
    //incomingData.data -> turns sheet into JS object with each row as an object with each column header as the keys  
    useEffect(() => {
-      axios.get(`https://sheet.best/api/sheets/8a781165-9f54-47cb-96e0-faf96ff5fe84`)
+      axios.get(`https://sheetdb.io/api/v1/ltp2kukqv5hav`)
       .then((incomingData) => {
          let tempData = incomingData.data; 
          let firstRow = tempData[0]; 

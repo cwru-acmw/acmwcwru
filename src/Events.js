@@ -60,10 +60,11 @@ export default function Events() {
       textTransform: 'unset !important', 
       fontFamily: 'Raleway', 
       fontWeight: 'bold', 
-      borderColor: '#7954A1',
+      border: '1.5px solid #7954A1',
       color: '#7954A1',
       '&:hover': {
          backgroundColor: '#F2F2F2',
+         border: '1.5px solid #7954A1',
       },
    }
 
@@ -97,7 +98,7 @@ export default function Events() {
          <HeaderBox image={eventsPic} height='50' top='40' title='Events' subtitle='' />
          <Container>
             <Stack direction='row' justifyContent='space-between' alignItems='center'>
-               <Typography variant="h5" color="secondary" sx={{fontWeight: 900, py: '25px'}}>
+               <Typography variant="h5" color="secondary" sx={{fontWeight: 800, py: '25px', fontSize: '32px'}}>
                   {eventTitle}
                </Typography>
                <Button 
@@ -127,22 +128,22 @@ export default function Events() {
 
             <Grid container rowSpacing={3} sx={{mb: '25px'}}>
                {Object.keys(eventData).map((key) => (
-                  <Grid item xs={12} container>
+                  <Grid item xs={12} container >
                      <Grid item xs={12}>
-                        <Typography variant='h6' sx={{fontWeight: 900, textAlign: 'left', px: '2%', py: '2%', backgroundColor: '#D9D9D9', width: 'auto'}}>
+                        <Typography variant='h6' sx={{fontWeight: 700, textAlign: 'left', px: '2%', py: '2%', backgroundColor: '#D9D9D9', width: 'auto'}}>
                            {key}
                         </Typography>
                      </Grid>
-                     <Grid item xs={12} container sx={{border: '1px solid #D9D9D9',}}  >
+                     <Grid item xs={12} container alignItems='stretch' sx={{border: '1px solid #D9D9D9', }}  >
                         {eventData[key].map((evs) => (
-                           <Grid item xs={12} sm={4} >
+                           <Grid item xs={12} sm={4} sx={{display: 'flex'}}>
                               <Card height="100%" sx={{backgroundColor: '#F2F2F2', m: '10px', display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}}>
                                  {/* <CardActionArea onClick={handleOpen}> */}
                                     <CardContent>
-                                       <Typography varaint='h6' sx={{fontWeight: 900, textAlign: 'left'}}>
+                                       <Typography varaint='h5' sx={{fontWeight: 700, textAlign: 'left', fontSize: '20px'}}>
                                           {evs.date}
                                        </Typography>
-                                       <Typography varaint='h6' sx={{textAlign: 'left', pb: '3%'}}>
+                                       <Typography varaint='h6' sx={{textAlign: 'left', pb: '3%', fontWeight: 600}}>
                                           {evs.Event}
                                        </Typography>
                                        <Divider varaint='middle' sx={{width:'40%'}}/>
@@ -153,9 +154,10 @@ export default function Events() {
                                           display="flex"
                                           justifyContent="flex-start"
                                           alignItems="flex-start"
-                                          marginTop={1}
+                                          marginTop={2}
                                           >
-                                          <Button endIcon={<PersonAddAlt1Icon />} href= {evs.Link} target='_blank' sx={btnStyle2}>Register Here </Button></Box>
+                                          <Button endIcon={<PersonAddAlt1Icon />} href= {evs.Link} target='_blank' sx={btnStyle2}>Register Here </Button>
+                                       </Box>
                                     </CardContent>
                                  {/* </CardActionArea> */}
                                  

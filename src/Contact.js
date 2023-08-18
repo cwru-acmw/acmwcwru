@@ -36,7 +36,7 @@ function Contact() {
          <HeaderBox image={contactPic} height='50' top='40' title='Contact Us' subtitle='' />
          <Container>
          <Box sx={{my:'25px'}}>
-               <Typography variant="h4" color="secondary" sx={{fontWeight: 900, pb: '1%'}}>
+               <Typography variant="h4" color="secondary" sx={{fontWeight: 700, pb: '1%'}}>
                  Get in Touch 
                </Typography>
                <Box sx={{my:'1%'}}>
@@ -49,7 +49,7 @@ function Contact() {
                </Box>
                {/* <Button href = "/about" sx={{...btnStyle2, my: '15px'}}>Contact our Exec Board</Button> */}
                <Link to='/about' style={linkStyle}>
-                  <Button sx={{...btnStyle2, my: '15px'}} >
+                  <Button sx={{...btnStyle2, my: '15px', fontWeight: 700}} >
                      Contact our Exec Board
                   </Button>
                </Link>

@@ -57,7 +57,7 @@ export default function NavBar(props) {
             <AppBar position="static" color='primary' sx={{py: 2}} component="nav">
                <Toolbar className="nav-bar-bar" sx={{ justifyContent: "space-between"}}>
                   <Link to="/" style={linkStyle}>
-                     <Typography  variant="h5" component="div" sx={{fontFamily: "Raleway", fontWeight: '900', color: "light", textDecoration: 'none', ml: '25px'}}>
+                     <Typography  variant="h5" component="div" sx={{fontFamily: "Raleway", fontWeight: '600', color: "light", textDecoration: 'none', ml: '25px'}}>
                         ACM-W · CWRU
                      </Typography>
                   </Link>

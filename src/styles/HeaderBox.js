@@ -17,7 +17,7 @@ export default function HeaderBox(props) {
          <Container maxWidth="xl" sx={{background: 'black', width: '100%', mx: '0%'}}> 
             <Box className="header" sx={{position: 'relative', height: `${props.height}vh`, textAlign: 'center', backgroundImage: `url(${props.image})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
                <div style={{position: 'absolute', width: '100%', backgroundColor: 'rgba(0,0,0,0.6)', height: '100%' }}>
-                  <Typography className="page-title" variant="h2" color="white" sx={{fontSize: '4.0em', fontWeight: 900, px: '5%', py: '20vh'}}>
+                  <Typography className="page-title" variant="h2" color="white" sx={{fontSize: '4.0em', fontWeight: 700, px: '5%', py: '20vh'}}>
                      {props.title}
                         
                   </Typography>

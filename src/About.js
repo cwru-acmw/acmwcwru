@@ -85,18 +85,18 @@ export default function About() {
          <Container sx={{mb: '25px'}}>
             {/* ADD HEADER IMAGE */}
             <Box sx={{my:'25px'}}>
-               <Typography variant="h5" color="secondary" sx={{fontWeight: 900, pb: '1%'}}>
+               <Typography variant="h5" color="secondary" sx={{fontWeight: 700, pb: '1%', fontSize: '28px'}}>
                   What is ACM-W?
                </Typography>
-               <Typography variant="body1">
+               <Typography variant="body1" sx={{fontSize: '18px', fontWeight: 400}}>
                   The Association for Computing Machinery-Women is a nationally recognized ACM student chapter that supports, celebrates, and provides professional development resources to women pursuing degrees in the computing field. 
                </Typography>
             </Box>
             <Box sx={{my:'2%'}}>
-               <Typography variant="h5" color="secondary" sx={{fontWeight: 900, pb: '1%'}}>
+               <Typography variant="h5" color="secondary" sx={{fontWeight: 700, pb: '1%', fontSize: '28px'}}>
                   Our Mission
                </Typography>
-               <Typography variant="body1">
+               <Typography variant="body1" sx={{fontSize: '18px', fontWeight: 400}}>
                   Our mission is to promote gender equity in the computing field and to develop an inclusive community. We hope to promote the success of women in this field and provide opportunities for professional development and collaboration. Such opportunities include peer mentoring, networking, resume reviews, and technical enrichment.
                   <br />
                   <br />
@@ -109,7 +109,7 @@ export default function About() {
          <Divider variant="middle" />
          
          <Container sx={{my: '20px', textAlign: 'center', alignItems: 'center'}}>
-            <Typography  Typography variant="h4" color="secondary" sx={{fontWeight: 900, pb: '20px'}} >
+            <Typography  Typography variant="h4" color="secondary" sx={{fontWeight: 700, pb: '20px', fontSize: '36px'}} >
                   Meet Our Exec Board
             </Typography>
             <Grid container justifyContent='space-between' alignItems='center' columnSpacing={8} rowSpacing={4}>
@@ -118,10 +118,10 @@ export default function About() {
                      <Card sx={{ minWidth: 400 }}>
                         <CardMedia component='img' image={position.pic} height='425' width='full' sx={{minWidth: 400}} />
                         <CardContent>
-                           <Typography variant='h5'>
+                           <Typography variant='h5' sx={{fontWeight: 700}}>
                               {position.role}
                            </Typography>
-                           <Typography variant='h6'>
+                           <Typography variant='h6' sx={{fontWeight: 500}}>
                               {position.name}
                            </Typography>
                         </CardContent>
@@ -150,10 +150,10 @@ export default function About() {
                      <Card sx={{ minWidth: 400 }}>
                         <CardMedia component='img' image={position.pic} height='425' width='full' sx={{minWidth: 400}} />
                         <CardContent>
-                           <Typography variant='h5'>
+                           <Typography variant='h5' sx={{fontWeight: 700}}>
                               {position.role}
                            </Typography>
-                           <Typography variant='h6'>
+                           <Typography variant='h6' sx={{fontWeight: 500}}>
                               {position.name}
                            </Typography>
                         </CardContent>

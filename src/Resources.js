@@ -92,7 +92,7 @@ function Resources() {
 
          <Container sx={{my: '20px', textAlign: 'center', alignItems: 'center'}}>
          
-            <Typography variant="h4" color="secondary" sx={{fontWeight: 900, mt: '30px', mb: '25px', textAlign: 'left'}}>
+            <Typography variant="h4" color="secondary" sx={{fontWeight: 700, mt: '30px', mb: '25px', textAlign: 'left'}}>
                   Coding Resources 
             </Typography>
             <Box>
@@ -118,17 +118,9 @@ function Resources() {
                </Grid>
             </Box> 
          </Container>
-
-         {/* <Divider variant="middle" sx={{my: '25px'}}/> */}
-
-         {/* <Divider textAlign='left' sx={{my: '25px'}}> 
-               <Typography variant="h4" color="secondary" sx={{fontWeight: 900}}>
-                  CWRU Resources 
-               </Typography>
-         </Divider>  */}
          
          <Container sx={{my: '20px', textAlign: 'center', alignItems: 'center'}}>
-            <Typography variant="h4" color="secondary" sx={{fontWeight: 900, mt: '30px', mb: '25px', textAlign: 'left'}}>
+            <Typography variant="h4" color="secondary" sx={{fontWeight: 700, mt: '30px', mb: '25px', textAlign: 'left'}}>
                   CWRU Resources 
             </Typography>
             <Box>
@@ -154,11 +146,9 @@ function Resources() {
                </Grid>
             </Box> 
          </Container>
-
-         {/* <Divider variant="middle" sx={{my: '25px', borderBottomWidth: 10}}/> */}
          
          <Container sx={{mt: '20px', textAlign: 'center', alignItems: 'center', mb: '35px'}}>
-            <Typography variant="h4" color="secondary" sx={{fontWeight: 900, mt: '30px', mb: '25px', textAlign: 'left'}}>
+            <Typography variant="h4" color="secondary" sx={{fontWeight: 700, mt: '30px', mb: '25px', textAlign: 'left'}}>
                   National ACM-W Resources 
             </Typography>
             <Box >

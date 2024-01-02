@@ -8,7 +8,7 @@ import Resources from './Resources';
 import Contact from './Contact'; 
 import NavBar from './NavBar'; 
 import Footer from './Footer'; 
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'; 
+import { Routes, Route } from 'react-router-dom'; 
 
 import {ThemeProvider} from '@mui/material/styles'; 
 import theme from './styles/Styles.js'; 

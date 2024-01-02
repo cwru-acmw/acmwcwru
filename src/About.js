@@ -1,4 +1,4 @@
-import { Button, Container, AppBar, Box, Typography, Paper, Card, CardMedia, CardContent, Divider, Grid, CardActions, IconButton } from "@mui/material"; 
+import { Container, Box, Typography, Card, CardMedia, CardContent, Divider, Grid, CardActions, IconButton } from "@mui/material"; 
 import {ThemeProvider} from '@mui/material/styles'; 
 import theme from './styles/Styles.js'; 
 import HeaderBox from './styles/HeaderBox'; 
@@ -83,17 +83,16 @@ export default function About() {
       <ThemeProvider theme={theme}>
          <HeaderBox image={aboutPic} height='50' top='40' title='About Us' subtitle='' />
          <Container sx={{mb: '25px'}}>
-            {/* ADD HEADER IMAGE */}
             <Box sx={{my:'25px'}}>
-               <Typography variant="h5" color="secondary" sx={{fontWeight: 700, pb: '1%', fontSize: '28px'}}>
+               <Typography variant="h5" color="secondary" sx={{fontWeight: 700, pb: '1%'}}>
                   What is ACM-W?
                </Typography>
-               <Typography variant="body1" sx={{fontSize: '18px', fontWeight: 400}}>
+               <Typography variant="body1" sx={{fontWeight: 400}}>
                   The Association for Computing Machinery-Women is a nationally recognized ACM student chapter that supports, celebrates, and provides professional development resources to women pursuing degrees in the computing field. 
                </Typography>
             </Box>
             <Box sx={{my:'2%'}}>
-               <Typography variant="h5" color="secondary" sx={{fontWeight: 700, pb: '1%', fontSize: '28px'}}>
+               <Typography variant="h5" color="secondary" sx={{fontWeight: 700, pb: '1%'}}>
                   Our Mission
                </Typography>
                <Typography variant="body1" sx={{fontSize: '18px', fontWeight: 400}}>
@@ -109,7 +108,7 @@ export default function About() {
          <Divider variant="middle" />
          
          <Container sx={{my: '20px', textAlign: 'center', alignItems: 'center'}}>
-            <Typography  Typography variant="h4" color="secondary" sx={{fontWeight: 700, pb: '20px', fontSize: '36px'}} >
+            <Typography  Typography variant="h4" color="secondary" sx={{fontWeight: 700, pb: '20px'}} >
                   Meet Our Exec Board
             </Typography>
             <Grid container justifyContent='space-between' alignItems='center' columnSpacing={8} rowSpacing={4}>
@@ -118,10 +117,10 @@ export default function About() {
                      <Card sx={{ minWidth: 400 }}>
                         <CardMedia component='img' image={position.pic} height='425' width='full' sx={{minWidth: 400}} />
                         <CardContent>
-                           <Typography variant='h5' sx={{fontWeight: 700}}>
+                           <Typography variant="h6" sx={{fontWeight: 700}}>
                               {position.role}
                            </Typography>
-                           <Typography variant='h6' sx={{fontWeight: 500}}>
+                           <Typography variant="body1" sx={{fontWeight: 500}}>
                               {position.name}
                            </Typography>
                         </CardContent>
@@ -140,8 +139,8 @@ export default function About() {
             </Grid>   
          </Container>
 
-         <Container sx={{my: '20px', textAlign: 'center', alignItems: 'center'}}>
-            <Typography  Typography variant="h4" color="secondary" sx={{fontWeight: 900, pb: '20px'}} >
+         <Container sx={{my: '30px', textAlign: 'center', alignItems: 'center'}}>
+            <Typography  Typography variant="h4" color="secondary" sx={{fontWeight: 700, pb: '20px'}} >
                   Meet Our Faculty
             </Typography>
             <Grid container justifyContent='space-between' alignItems='center' columnSpacing={8} rowSpacing={4}>
@@ -150,10 +149,10 @@ export default function About() {
                      <Card sx={{ minWidth: 400 }}>
                         <CardMedia component='img' image={position.pic} height='425' width='full' sx={{minWidth: 400}} />
                         <CardContent>
-                           <Typography variant='h5' sx={{fontWeight: 700}}>
+                           <Typography variant="h6" sx={{fontWeight: 700}}>
                               {position.role}
                            </Typography>
-                           <Typography variant='h6' sx={{fontWeight: 500}}>
+                           <Typography variant='body1' sx={{fontWeight: 500}}>
                               {position.name}
                            </Typography>
                         </CardContent>

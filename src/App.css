@@ -3,8 +3,8 @@
   font-family: "Raleway";
 }
 
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
+a {
+  text-decoration: "none";
+  color: "#ffffff";
+}
 

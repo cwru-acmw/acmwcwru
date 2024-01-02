@@ -1,12 +1,9 @@
-import { Button, Container, AppBar, Box, Typography, Paper, Card, CardMedia, CardContent, Divider, Grid } from "@mui/material"; 
+import { Container, Box, Typography, Card, CardMedia, CardContent, Grid } from "@mui/material"; 
 import {ThemeProvider} from '@mui/material/styles'; 
 import theme from './styles/Styles.js'; 
 import HeaderBox from './styles/HeaderBox'; 
 import resourcesPic from './pictures/resources-header.jpg';
 import CardActionArea from '@mui/material/CardActionArea';
-
-import SchoolIcon from '@mui/icons-material/School';
-import CodeIcon from '@mui/icons-material/Code';
 
 import leetcode from './pictures/leetcode.jpg';
 import hackerrank from './pictures/hackerrank.jpg';
@@ -85,14 +82,18 @@ function Resources() {
             url: 'https://runestone.academy/ns/books/published/fopp/index.html'}, 
    ]
 
-    
+   const headingStyle = {
+      fontWeight: 700, 
+      mt: '30px', 
+      mb: '25px', 
+      textAlign: 'left'
+   }
    return (
       <ThemeProvider theme={theme}>
          <HeaderBox image={resourcesPic} height='50' top='40' title='Resources' subtitle='' />  
 
          <Container sx={{my: '20px', textAlign: 'center', alignItems: 'center'}}>
-         
-            <Typography variant="h4" color="secondary" sx={{fontWeight: 700, mt: '30px', mb: '25px', textAlign: 'left'}}>
+            <Typography variant="h5" color="secondary" sx={headingStyle}>
                   Coding Resources 
             </Typography>
             <Box>
@@ -103,10 +104,10 @@ function Resources() {
                            <CardActionArea href={position.url} target='_blank'>
                               <CardMedia component='img' image={position.pic} height='250' width='full' sx={{minWidth: 400}} />
                               <CardContent>
-                                 <Typography variant='h7'>
+                                 <Typography variant='body1' sx={{fontWeight: 500}}>
                                     {position.title}
                                  </Typography>
-                                 <Typography display="block" variant='caption'>
+                                 <Typography display="block" variant='subtitle1'>
                                     {position.desc}
                                  </Typography>
                               </CardContent>
@@ -120,7 +121,7 @@ function Resources() {
          </Container>
          
          <Container sx={{my: '20px', textAlign: 'center', alignItems: 'center'}}>
-            <Typography variant="h4" color="secondary" sx={{fontWeight: 700, mt: '30px', mb: '25px', textAlign: 'left'}}>
+            <Typography variant="h5" color="secondary" sx={headingStyle}>
                   CWRU Resources 
             </Typography>
             <Box>
@@ -131,10 +132,10 @@ function Resources() {
                         <CardActionArea href={position.url} target='_blank'>
                            <CardMedia component='img' image={position.pic} height='250' width='full' sx={{minWidth: 400}} />
                            <CardContent>
-                              <Typography variant='h7'>
+                              <Typography variant='body1' sx={{fontWeight: 500}}>
                                  {position.title}
                               </Typography>
-                              <Typography display="block" variant='caption'>
+                              <Typography display="block" variant='subtitle1'>
                                  {position.desc}
                               </Typography>
                            </CardContent>
@@ -148,7 +149,7 @@ function Resources() {
          </Container>
          
          <Container sx={{mt: '20px', textAlign: 'center', alignItems: 'center', mb: '35px'}}>
-            <Typography variant="h4" color="secondary" sx={{fontWeight: 700, mt: '30px', mb: '25px', textAlign: 'left'}}>
+            <Typography variant="h5" color="secondary" sx={headingStyle}>
                   National ACM-W Resources 
             </Typography>
             <Box >
@@ -159,10 +160,10 @@ function Resources() {
                         <CardActionArea href={position.url} target='_blank'>
                            <CardMedia component='img' image={position.pic} height='250' width='full' sx={{minWidth: 400}} />
                            <CardContent>
-                              <Typography display = "block" variant='h7'>
+                              <Typography display = "block" variant='body1' sx={{fontWeight: 500}}>
                                  {position.title}
                               </Typography>
-                              <Typography display="block" variant='caption'>
+                              <Typography display="block" variant='subtitle1'>
                                  {position.desc}
                               </Typography>
                            </CardContent>
@@ -174,25 +175,6 @@ function Resources() {
                </Grid>
             </Box> 
          </Container>
-
-
-
-
-
-         {/* 
-         AROHI: 
-            if you want to get fancy, you could try and make a carousel using: 
-            https://www.npmjs.com/package/react-material-ui-carousel
-
-            it doesn't seem too bad but idk
-         
-            OR: 
-            you could make a grid or stack of <Paper /> components or <Card /> compoinentswith all the links to the resoures
-
-            if want to add the pics of each resource, can maybe just take screenshots and add those- or could try to use the library: https://www.npmjs.com/package/@dhaiwat10/react-link-preview but i couldnt get it to work
-            or i found this: https://dev.to/ilonacodes/frontend-shorts-how-to-create-link-content-previewer-with-react-vue-and-vanilla-javascript-1pm1
-         
-         */}
          
       </ThemeProvider>
    );

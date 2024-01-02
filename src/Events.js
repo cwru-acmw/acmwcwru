@@ -1,5 +1,4 @@
 import {useState, useEffect } from 'react'; 
-import axios from 'axios'; 
 import { Button, Container, Box, Typography, Card, CardContent, Divider, Grid, Tooltip, Stack, IconButton } from "@mui/material"; 
 import {ThemeProvider} from '@mui/material/styles'; 
 import theme from './styles/Styles.js'; 
@@ -9,33 +8,34 @@ import eventsPic from './pictures/newerevent.jpg';
 import EventIcon from '@mui/icons-material/Event';
 import React from "react";
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
+import {getSheet} from './sheetsApi';
 
 export default function Events() {
-   const [open, setOpen] = useState(false); 
-   // const handleOpen = () => setOpen(true); 
-   // const handleClose = () => setOpen(false); 
    const [eventData, setEventData] = useState([]);  
    const [eventTitle, setEventTitle] = useState(""); 
    const [gcalLink, setGcalLink] = useState(''); 
 
-   //change calendar link for each semester
-   // const gcalLink = 'https://calendar.google.com/calendar/u/0?cid=Y185M2NlYjM1NWVjMGYzYTA3ZDUzZjNjMmI0ZDA5NGJjNjVjY2ZlM2QyN2I1NjM3YjI2ZTQ0ZGFiZDAxMjYxYjFhQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20';
-
-   //fetches the data once the "events" page is first rendered (updates on refresh of page)
-   //incomingData.data -> turns sheet into JS object with each row as an object with each column header as the keys  
    useEffect(() => {
-      axios.get(`https://sheetdb.io/api/v1/ltp2kukqv5hav`)
-      .then((incomingData) => {
-         let tempData = incomingData.data; 
-         let firstRow = tempData[0]; 
-         delete tempData[0]; //delete row with just heading and Gcal Link
-         setEventTitle(firstRow.Event); 
-         setGcalLink(firstRow.Link); 
+      const fetchData = async () => {
+         try {
+            const incomingData = await getSheet("Events");
 
-         setEventData(groupedByMonth(tempData));
-         console.log(incomingData.data); 
-         console.log(groupedByMonth(tempData))
-      })
+            //get data in sheet
+            let tempData = incomingData[0].data;
+            let firstRow = tempData[0]; 
+            delete tempData[0]; //delete row with just heading and Gcal Link
+            setEventTitle(firstRow.Event); 
+            setGcalLink(firstRow.Link); 
+
+            //get all event data and sort by month
+            setEventData(groupedByMonth(tempData)); 
+         } catch (error) {
+           console.error(error);
+         }
+
+       };
+      
+       fetchData(); 
    }, [])
 
    //there may be bug if months not added in order on spreadsheet
@@ -48,7 +48,7 @@ export default function Events() {
         newArr[curr.Month] = [];
       }
       newArr[curr.Month].push({ 
-            date: curr.date,
+            Date: curr.Date,
             Description: curr.Description,
             Event: curr.Event,
             Link: curr.Link
@@ -98,20 +98,20 @@ export default function Events() {
             </Stack>
 
             <Grid container rowSpacing={3} sx={{mb: '25px'}}>
-               {Object.keys(eventData).map((key) => (
-                  <Grid item xs={12} container >
+               {Object.keys(eventData).map((key, idx) => (
+                  <Grid item xs={12} container key={idx}>
                      <Grid item xs={12}>
                         <Typography variant="h6" sx={{fontWeight: 700, textAlign: 'left', px: '2%', py: '2%', backgroundColor: '#D9D9D9', width: 'auto'}}>
                            {key}
                         </Typography>
                      </Grid>
-                     <Grid item xs={12} container alignItems='stretch' sx={{border: '1px solid #D9D9D9', }}  >
-                        {eventData[key].map((evs) => (
-                           <Grid item xs={12} sm={4} sx={{display: 'flex'}}>
+                     <Grid item xs={12} container alignItems='stretch' sx={{border: '1px solid #D9D9D9', }}>
+                        {eventData[key].map((evs, index) => (
+                           <Grid item xs={12} sm={6} md={4} sx={{display: 'flex'}} key={index}>
                               <Card height="100%" sx={{backgroundColor: '#F2F2F2', m: '10px', display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}}>
                                     <CardContent>
                                        <Typography variant="body1" sx={{fontWeight: 700, textAlign: 'left'}}>
-                                          {evs.date}
+                                          {evs.Date}
                                        </Typography>
                                        <Typography variant="body2" sx={{textAlign: 'left', pb: '3%', fontWeight: 600}}>
                                           {evs.Event}

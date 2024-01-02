@@ -4,65 +4,82 @@ import theme from './styles/Styles.js';
 import HeaderBox from './styles/HeaderBox'; 
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
+import {useState, useEffect } from 'react'; 
+import {getSheet} from './sheetsApi';
 
 // change the pictures imported - delete old pictures in picture folder when need to import new pics
 import aboutPic from './pictures/about-header.jpg';
-
-import presPic from './exec-pictures/presidentPic.jpg';
-import vpPic from './exec-pictures/vpPic.jpg';
-import prPic from './exec-pictures/prPic.jpg';
-import outreachPic from './exec-pictures/outreachPic.jpg';
 import advisorPic from './exec-pictures/advisorPic.jpg';
 import sponsorPic from './exec-pictures/sponsorPic.jpg';
-import treasurerPic from './exec-pictures/treasurerPic.jpg';
-import secretaryPic from './exec-pictures/secretaryPic.jpg';
 
 export default function About() {
+   const [execInfo, setExecInfo] = useState([]);
+    
+   useEffect(() => {
+      const fetchData = async () => {
+         try {
+            const incomingData = await getSheet("Exec");
+
+            //get data in sheet
+            let tempData = incomingData[0].data;
+            console.log(tempData)
+
+            //get all event data and sort by month
+            setExecInfo(tempData); 
+         } catch (error) {
+           console.error(error);
+         }
+
+       };
+      
+       fetchData(); 
+   }, [])
+
    // change exec info here - import pics from pictures folder shown above 
-   const execInfo = [
-      {
-         role: 'President', 
-         name: 'Arohi Mehta', 
-         pic: presPic, 
-         lIn: 'https://www.linkedin.com/in/arohi-mehta/', 
-         email: 'aum5@case.edu'
-      }, 
-      {
-         role: 'Vice President', 
-         name: 'Zoe Goldberg', 
-         pic: vpPic, 
-         lIn: 'https://www.linkedin.com/in/zmgoldberg/', 
-         email: 'zmg12@case.edu'
-      },
-      {
-         role: 'Treasurer', 
-         name: 'Isabella Craun', 
-         pic: treasurerPic, 
-         lIn: 'https://www.linkedin.com/in/bellacraun/', 
-         email: 'imc33@case.edu'
-      },
-      {
-         role: 'PR Chair', 
-         name: 'Ali Puccio', 
-         pic: prPic, 
-         lIn: 'https://www.linkedin.com/in/alessandra-puccio/', 
-         email: 'agp63@case.edu'
-      }, 
-      {
-         role: 'Outreach Chair', 
-         name: 'Kennedy Jackson', 
-         pic: outreachPic, 
-         lIn: 'https://www.linkedin.com/', 
-         email: 'knj25@case.edu'
-      }, 
-      {
-         role: 'Secretary', 
-         name: 'Crystal Zhu', 
-         pic: secretaryPic, 
-         lIn: 'https://www.linkedin.com/in/crystalzhu-/', 
-         email: 'cxz630@case.edu'
-      }
-   ];
+   // const execInfo = [
+   //    {
+   //       role: 'President', 
+   //       name: 'Arohi Mehta', 
+   //       pic: presPic, 
+   //       lIn: 'https://www.linkedin.com/in/arohi-mehta/', 
+   //       email: 'aum5@case.edu'
+   //    }, 
+   //    {
+   //       role: 'Vice President', 
+   //       name: 'Zoe Goldberg', 
+   //       pic: vpPic, 
+   //       lIn: 'https://www.linkedin.com/in/zmgoldberg/', 
+   //       email: 'zmg12@case.edu'
+   //    },
+   //    {
+   //       role: 'Treasurer', 
+   //       name: 'Isabella Craun', 
+   //       pic: treasurerPic, 
+   //       lIn: 'https://www.linkedin.com/in/bellacraun/', 
+   //       email: 'imc33@case.edu'
+   //    },
+   //    {
+   //       role: 'PR Chair', 
+   //       name: 'Ali Puccio', 
+   //       pic: prPic, 
+   //       lIn: 'https://www.linkedin.com/in/alessandra-puccio/', 
+   //       email: 'agp63@case.edu'
+   //    }, 
+   //    {
+   //       role: 'Outreach Chair', 
+   //       name: 'Kennedy Jackson', 
+   //       pic: outreachPic, 
+   //       lIn: 'https://www.linkedin.com/', 
+   //       email: 'knj25@case.edu'
+   //    }, 
+   //    {
+   //       role: 'Secretary', 
+   //       name: 'Crystal Zhu', 
+   //       pic: secretaryPic, 
+   //       lIn: 'https://www.linkedin.com/in/crystalzhu-/', 
+   //       email: 'cxz630@case.edu'
+   //    }
+   // ];
 
    const facultyInfo = [
       {
@@ -95,7 +112,7 @@ export default function About() {
                <Typography variant="h5" color="secondary" sx={{fontWeight: 700, pb: '1%'}}>
                   Our Mission
                </Typography>
-               <Typography variant="body1" sx={{fontSize: '18px', fontWeight: 400}}>
+               <Typography variant="body1" sx={{fontWeight: 400}}>
                   Our mission is to promote gender equity in the computing field and to develop an inclusive community. We hope to promote the success of women in this field and provide opportunities for professional development and collaboration. Such opportunities include peer mentoring, networking, resume reviews, and technical enrichment.
                   <br />
                   <br />
@@ -108,27 +125,27 @@ export default function About() {
          <Divider variant="middle" />
          
          <Container sx={{my: '20px', textAlign: 'center', alignItems: 'center'}}>
-            <Typography  Typography variant="h4" color="secondary" sx={{fontWeight: 700, pb: '20px'}} >
+            <Typography  Typography variant="h4" color="secondary" sx={{fontWeight: 700, pb: '25px'}} >
                   Meet Our Exec Board
             </Typography>
-            <Grid container justifyContent='space-between' alignItems='center' columnSpacing={8} rowSpacing={4}>
+            <Grid container justifyContent='center' alignItems='center' columnSpacing={3} rowSpacing={4} >
                {execInfo.map((position, index) => (
-                  <Grid item alignItems='center' xs={12} sm={6} key={index}>
-                     <Card sx={{ minWidth: 400 }}>
-                        <CardMedia component='img' image={position.pic} height='425' width='full' sx={{minWidth: 400}} />
+                  <Grid item alignItems='stretch' xs={9} sm={6} md={4} key={index} >
+                     <Card sx={{ minWidth: 'auto' }}>
+                        <CardMedia component='img' image={`https://drive.google.com/uc?export=view&id=${position["Picture ID"]}`} height='325vh' width='auto' sx={{display: 'block', mx: 'auto',}} />
                         <CardContent>
                            <Typography variant="h6" sx={{fontWeight: 700}}>
-                              {position.role}
+                              {position.Position}
                            </Typography>
                            <Typography variant="body1" sx={{fontWeight: 500}}>
-                              {position.name}
+                              {position.Name}
                            </Typography>
                         </CardContent>
-                        <CardActions sx={{justifyContent:'end'}} disableSpacing>
-                           <IconButton href={position.lIn} target='_blank' size="medium"  >
+                        <CardActions sx={{justifyContent:'end', mt: '-15px'}} disableSpacing>
+                           <IconButton href={position.LinkedIn} target='_blank' size="medium"  >
                               <LinkedInIcon />
                            </IconButton>
-                           <IconButton href={`mailTo: ${position.email}`}  size="medium" >
+                           <IconButton href={`mailTo: ${position.Email}`} size="medium">
                               <EmailIcon />
                            </IconButton>
                         </CardActions>
@@ -143,11 +160,11 @@ export default function About() {
             <Typography  Typography variant="h4" color="secondary" sx={{fontWeight: 700, pb: '20px'}} >
                   Meet Our Faculty
             </Typography>
-            <Grid container justifyContent='space-between' alignItems='center' columnSpacing={8} rowSpacing={4}>
+            <Grid container justifyContent='space-evenly' alignItems='center' columnSpacing={2} rowSpacing={4}>
                {facultyInfo.map((position, index) => (
-                  <Grid item alignItems='center' xs={12} sm={6} key={index}>
-                     <Card sx={{ minWidth: 400 }}>
-                        <CardMedia component='img' image={position.pic} height='425' width='full' sx={{minWidth: 400}} />
+                  <Grid item alignItems='stretch' xs={9} md={6} lg={4} key={index}>
+                     <Card sx={{ minWidth: 'auto' }}>
+                        <CardMedia component='img' image={position.pic} height='375vh' width='auto' sx={{display: 'block', mx: 'auto',}}  />
                         <CardContent>
                            <Typography variant="h6" sx={{fontWeight: 700}}>
                               {position.role}
@@ -156,8 +173,8 @@ export default function About() {
                               {position.name}
                            </Typography>
                         </CardContent>
-                        <CardActions sx={{justifyContent:'end'}} disableSpacing>
-                           <IconButton href={`mailTo: ${position.email}`}  size="medium" >
+                        <CardActions sx={{justifyContent:'end', mt: '-15px'}} disableSpacing>
+                           <IconButton href={`mailTo: ${position.email}`}  size="medium">
                               <EmailIcon />
                            </IconButton>
                         </CardActions>

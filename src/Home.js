@@ -9,15 +9,11 @@ import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 export default function Home() {
-   const linkStyle = {
-      textDecoration: "none",
-      color: "#ffffff", 
-    };
    
   return (
     <ThemeProvider theme={theme}>
-      <Container maxWidth="xl" sx={{background: 'black', width: '100%', mx: '0%'}}> 
-         <Box className="header" sx={{position: 'relative', height: '80vh', textAlign: 'center'}} >
+      <Container maxWidth='100%' sx={{background: 'black', mx: '0%'}}> 
+         <Box className="header" sx={{position: 'relative', height: '80vh', textAlign: 'center', maxWidth: '100%'}} >
             <img src={computer} style={{width: '100%', height: '100%', opacity: 0.55}} />
             <div style={{position: 'absolute', top: '30%', width: '100%'}}>
                <Typography className="page-title" variant="h1" color="white" sx={{fontSize: '4.0rem', fontWeight: 700, px: '5%', display: { xs: "none", sm: "block" }}}>
@@ -42,8 +38,8 @@ export default function Home() {
          </Box>
       </Container>
 
-      <Container maxWidth="xl" sx={{width: '100%', mx: '0%', my: '25px'}}>
-         <Paper square elevation={2} sx={{background: '#FAF1FF', textAlign: 'center', py: '20px'}}>
+      <Container maxWidth="100%" sx={{ mx: '0%', my: '25px'}}>
+         <Paper square elevation={2} sx={{background: '#FAF1FF', textAlign: 'center', py: '20px', position: 'relative'}}>
             <Typography variant="body1" sx={{pb: '20px', px: '2%'}}>
                ACM-W aims to promote gender equity in technical fields and develop an inclusive community. We hope to promote the success of women in this field and provide opportunities for professional development and collaboration. 
             </Typography>
@@ -87,12 +83,12 @@ export default function Home() {
          
       </Container>
       <Divider variant="middle" />
-      <Container sx={{my: '25px', mx: '2%', justifyContent: 'center'}}>
+      <Container width='100%' sx={{my: '25px', mx: '2%', justifyContent: 'center'}}>
          <Typography variant="h5" sx={{fontWeight: 700, color: '#7954A1', pb: '5px'}}>
             Latest in CWRU ACM-W
          </Typography>
 
-         <iframe src='https://widgets.sociablekit.com/instagram-feed/iframe/108583' frameBorder='0' width='100%' height='520px'></iframe>
+         <iframe src='https://widgets.sociablekit.com/instagram-feed/iframe/108583' title="ACMW Instagram" frameBorder='0' width='100%' height='520px'></iframe>
          
       </Container>
       

@@ -132,7 +132,7 @@ export default function About() {
                {execInfo.map((position, index) => (
                   <Grid item alignItems='stretch' xs={9} sm={6} md={4} key={index} >
                      <Card sx={{ minWidth: 'auto' }}>
-                        <CardMedia component='img' image={`https://drive.google.com/uc?export=view&id=${position["Picture ID"]}`} height='325vh' width='auto' sx={{display: 'block', mx: 'auto',}} />
+                        <CardMedia component='img' image={`https://drive.google.com/thumbnail?id=${position["Picture ID"]}&sz=w1000`} height='325vh' width='auto' sx={{display: 'block', mx: 'auto',}} />
                         <CardContent>
                            <Typography variant="h6" sx={{fontWeight: 700}}>
                               {position.Position}
